@@ -14,11 +14,205 @@ body {
 @import 'variables';
 @import 'grid';
 
-.container {
-  width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+// .container {
+//   width: 100%;
+//   max-width: 1200px;
+//   margin: 0 auto;
+// }
+
+.containerWhite {
+    background-color: white;
 }
 
 @import 'nav';
 @import 'homeImages';
+@import 'menuItems';
+
+.redText {
+    color: $redColor;
+}
+
+.whiteText {
+    color: white;
+}
+
+.backRed {
+    background-color: $redColor;
+}
+
+.backGreen {
+    background-color: $greenColor;
+}
+
+.backYellow {
+    background-color: $yellowColor;
+}
+
+.backBlue {
+    background-color: $blueColor;
+}
+
+.infoFont {
+    font-weight: 300;
+    font-size: 18px;
+}
+
+.headerFont {
+    font-size: 25px;
+}
+
+.boxWidth {
+    width: 50%;
+    padding: 10px;
+}
+
+.smallboxWidth {
+    width: 35%;
+    padding: 15px;
+}
+
+.flex {
+    display: flex;
+}
+
+.justifyContentSpaceAround {
+    justify-content: space-around;
+}
+
+.justifyContentStart {
+    justify-content: flex-start;
+}
+
+.justifyContentCenter {
+    justify-content: center;
+}
+
+.alignItemsCenter {
+    align-items: center;
+}
+
+.flexWrap {
+    flex-wrap: wrap;
+}
+
+.shopCart {
+    color: black;
+}
+
+.centerAlign {
+    text-align: center;
+}
+
+.leftAlign {
+    text-align: left;
+}
+
+.rightAlign {
+    text-align: right;
+}
+
+.callBtnMenu {
+    display: none;
+}
+
+// .placeOrderBtn {
+//     position: relative;
+// }
+
+.placeOrderBtn .btnPO {
+    position: fixed;
+    top: 95%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: $redColor;
+    color: white;
+    font-family: 'Raleway', 'Lato', 'Helvetica', sans-serif;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    width: 100%;
+}
+
+
+@media screen and (min-width: $mdWidth){
+    .container {
+      width: 100%;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .backgroundImage {
+        width: 100%;
+        // height: 100vh;
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../highFiImages/background.jpg);
+        background-size: cover;
+        background-position: left;
+        background-repeat: repeat-y;
+    }
+
+    .callBtnMenu {
+        display: flex;
+        position: absolute;
+        top: 80%;
+        left: 80%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        color: black;
+        font-family: 'Raleway', 'Lato', 'Helvetica', sans-serif;
+        font-size: 20px;
+        font-weight: 700;
+        padding: 24px 16px;
+        background-color: transparent;
+        border: none;
+    }
+
+    .callBtnMenu:hover {
+        color: $redColor;
+    }
+
+    .placeOrderBtn .btnMdPO {
+        width: 50%;
+    }
+
+    .NoflexWrapMd {
+        flex-wrap: nowrap;
+    }
+
+}
+
+
+@media screen and (min-width: $lgWidth){
+    .container {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .placeOrderBtn .btnLrgPO {
+        width: 30%;
+    }
+
+    .backRedLrg {
+        width: 30%;
+    }
+
+    .justifyContentCenterLrg {
+        justify-content: center;
+    }
+
+    .alignItemsCenterLrg {
+        align-items: center;
+    }
+
+    .shopCart {
+        margin-left: 60px;
+    }
+
+    .lrgBoxWidth {
+        width: 30%;
+        padding: 0 70px;
+
+    }
+
+}
