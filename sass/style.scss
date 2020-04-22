@@ -9,16 +9,12 @@
 body {
     font-family: 'Raleway', 'Lato', 'Helvetica', sans-serif;
     font-size: 20px;
+    margin-bottom: 100px;
 }
 
 @import 'variables';
 @import 'grid';
 
-// .container {
-//   width: 100%;
-//   max-width: 1200px;
-//   margin: 0 auto;
-// }
 
 .containerWhite {
     background-color: white;
@@ -27,6 +23,11 @@ body {
 @import 'nav';
 @import 'homeImages';
 @import 'menuItems';
+@import 'modals';
+
+.floatR {
+    float: right;
+}
 
 .redText {
     color: $redColor;
@@ -40,16 +41,24 @@ body {
     background-color: $redColor;
 }
 
-.backGreen {
-    background-color: $greenColor;
-}
-
 .backYellow {
     background-color: $yellowColor;
 }
 
 .backBlue {
     background-color: $blueColor;
+}
+
+.borderGreen {
+    border: $greenColor 3px solid;
+}
+
+.borderYellow {
+    border: $yellowColor 3px solid;
+}
+
+.fontWeightBold {
+    font-weight: 700;
 }
 
 .infoFont {
@@ -59,6 +68,10 @@ body {
 
 .headerFont {
     font-size: 25px;
+}
+
+.subHeading {
+    font-size: 20px;
 }
 
 .boxWidth {
@@ -115,9 +128,18 @@ body {
     display: none;
 }
 
-// .placeOrderBtn {
-//     position: relative;
-// }
+.reviewBtn {
+    display: flex;
+    position: fixed;
+    top: 90%;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    color: black;
+    padding: 24px 16px;
+    background-color: transparent;
+    border: none;
+}
 
 .placeOrderBtn .btnPO {
     position: fixed;
@@ -132,6 +154,7 @@ body {
     padding: 12px 24px;
     border: none;
     width: 100%;
+    text-align: center;
 }
 
 
@@ -144,17 +167,16 @@ body {
 
     .backgroundImage {
         width: 100%;
-        // height: 100vh;
-        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../highFiImages/background.jpg);
+        background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../highFiImages/backgroundLong.png);
         background-size: cover;
-        background-position: left;
-        background-repeat: repeat-y;
+        background-position: center;
+        background-repeat: repeat;
     }
 
     .callBtnMenu {
         display: flex;
-        position: absolute;
-        top: 80%;
+        position: fixed;
+        top: 90%;
         left: 80%;
         transform: translate(-50%, -50%);
         -ms-transform: translate(-50%, -50%);
@@ -165,11 +187,13 @@ body {
         padding: 24px 16px;
         background-color: transparent;
         border: none;
+        z-index: 1000;
+
+        &:hover {
+            color: $redColor;
+        }
     }
 
-    .callBtnMenu:hover {
-        color: $redColor;
-    }
 
     .placeOrderBtn .btnMdPO {
         width: 50%;

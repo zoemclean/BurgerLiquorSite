@@ -45,27 +45,34 @@
     font-size: 40px;
 }
 
-a:link {
-    color: white;
+
+.navSm {
     text-decoration: none;
+    &:link, &:visited {
+        color: white;
+    }
+
+    &:hover {
+        color: $redColor
+    }
+
+    &:active {
+        color: white;
+    }
 }
 
-a:visited {
-    color: white;
+.redBtns {
     text-decoration: none;
+    &:link, &:visited {
+        color: white;
+    }
+    &:hover {
+        color: black;
+    }
+    &:active {
+        color: white;
+    }
 }
-
-a:hover {
-    color: $redColor;
-    text-decoration: none;
-}
-
-a:active {
-    color: white;
-    text-decoration: none;
-}
-
-
 
 .listItemWaiter {
     font-size: 25px;
@@ -107,25 +114,19 @@ a:active {
         display: none;
     }
 
-    a:link {
-        color: black;
+    .navMd {
         text-decoration: none;
+        &:link, &:visited {
+            color: black;
+        }
+        &:hover {
+            color: $redColor;
+        }
+        &:active {
+            color: black;
+        }
     }
 
-    a:visited {
-        color: black;
-        text-decoration: none;
-    }
-
-    a:hover {
-        color: $redColor;
-        text-decoration: none;
-    }
-
-    a:active {
-        color: black;
-        text-decoration: none;
-    }
 
 }
 

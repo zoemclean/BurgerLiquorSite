@@ -8,26 +8,221 @@
 
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class="backgroundImage">
 
-        <nav id="nav" class="navbar">
-            <div class="container navContainer">
-                <div class="navLogo">
-                    <a href="index.html"><img class="headerImg" src="highFiImages/Logo.png" alt="Burger Liquor logo"></a>
+            <div class="container containerWhite">
+
+                <nav id="nav" class="navbar">
+                    <div class="navContainer">
+                        <div class="navLogo">
+                            <a href="index.html"><img class="headerImg" src="highFiImages/Logo.png" alt="Burger Liquor logo"></a>
+                        </div>
+                        <div id="navListButton" class="navIcon">
+                            <i class="fas fa-bars fa-3x"></i>
+                        </div>
+                        <div id="navList" class="navList">
+                            <ul>
+                                <li class="listItem"><a class="navSm navMd" href="food.html">FOOD</a></li>
+                                <li class="listItem"><a class="navSm navMd" href="drinks.html">DRINKS</a></li>
+                                <li class="listItem"><a class="navSm navMd" href="cart.html">YOUR ORDER</a></li>
+                                <li id="callWaitMobile" class="listItem listItemWaiter">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+
+                <div id="callWaitMobileModal" class="modal hidden">
+                    <div class="modalShort">
+                        <h3 class="floatR" id="closeCallMobile">&#10005;</h3>
+                        <h3 class="extraPad centerAlign">WAITER HAS BEEN CALLED OVER</h3>
+                        <div class="infoFont padForm">
+                            <a class="backRed extraPad redBtns" href="food.html">KEEP LOOKING</a>
+                        </div>
+                    </div>
                 </div>
-                <div id="navListButton" class="navIcon">
-                    <i class="fas fa-bars fa-3x"></i>
+
+                <div id="callWaitMLrg" class="callWaiterBtn">
+                    <button class="callBtnMenu" type="button" name="button">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></button>
                 </div>
-                <div id="navList" class="navList">
-                    <ul>
-                        <li class="listItem"><a href="food.html">FOOD</a></li>
-                        <li class="listItem"><a href="drinks.html">DRINKS</a></li>
-                        <li class="listItem"><a href="cart.html">CART</a></li>
-                        <li class="listItem listItemWaiter">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></li>
-                    </ul>
+
+                <div id="callWaitLrgModal" class="modal hidden">
+                    <div class="modalShort">
+                        <h3 class="floatR" id="closeCallLrg">&#10005;</h3>
+                        <h3 class="extraPad centerAlign">WAITER HAS BEEN CALLED OVER</h3>
+                        <div class="infoFont padForm">
+                            <a class="backRed extraPad redBtns" href="food.html">KEEP LOOKING</a>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </nav>
+
+
+                <div id="review" class="callWaiterBtn">
+                    <button class="reviewBtn noteFont" type="button" name="button">LEAVE A REVIEW</button>
+                </div>
+
+                <div id="reviewModal" class="modal hidden">
+                    <div class="modalMedium">
+                        <h3 class="floatR" id="closeReview">&#10005;</h3>
+                        <h3 class="extraPad centerAlign">LEAVE A REVIEW</h3>
+                        <i id="starOne" class="far fa-star redText"></i>
+                        <i id="starTwo" class="far fa-star redText"></i>
+                        <i id="starThree" class="far fa-star redText"></i>
+                        <i id="starFour" class="far fa-star redText"></i>
+                        <i id="starFive" class="far fa-star redText"></i>
+                        <form class="infoFont padForm" action="index.html" method="post">
+                            <textarea name="name" rows="8" cols="30" placeholder="any comments..."></textarea>
+                        </form>
+                        <div class="infoFont padForm">
+                             <a class="backRed extraPad redBtns" href="cart.html">SUBMIT REVIEW</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="flex alignItemsCenter justifyContentCenter">
+                    <div class="centerAlign backRed backRedLrg boxWidth whiteText">
+                        <h3>YOUR ORDER</h3>
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <div class="col col12 extraPad">
+                            <h5 class="noteFont floatR">edit</h5>
+                    </div>
+                </div>
+
+                <div class="row flex flexWrap">
+                    <div class="col col12 colL6 itemPadding flex flexWrap">
+                        <div class="col9">
+                            <h5>THE STANDARD</h5>
+                        </div>
+                        <div class="col3 infoFont rightAlign">
+                            <h5>13.00</h5>
+                        </div>
+                        <div class="col12 infoFont extraPad">
+                            <p>beef, cheese, pickles, ketchup and mustard mayo (gf* df*)</p>
+                        </div>
+                    </div>
+                    <div class="col col12 colL6 itemPadding flex flexWrap">
+                        <div class="col9">
+                            <h5>THE STANDARD</h5>
+                        </div>
+                        <div class="col3 infoFont rightAlign">
+                            <h5>13.00</h5>
+                        </div>
+                        <div class="col12 infoFont extraPad">
+                            <p>beef, cheese, pickles, ketchup and mustard mayo (gf* df*)</p>
+                        </div>
+                    </div>
+
+                    <div class="col col12 colL6 itemPadding flex flexWrap">
+                        <div class="col9">
+                            <h5>PUNJABI POUTINE <sub class="infoFont">(THE ALL-STAR BL CLASSIC)</sub></h5>
+                        </div>
+                        <div class="col3 infoFont rightAlign">
+                            <h5>14.00</h5>
+                        </div>
+                        <div class="col12 infoFont extraPad">
+                            <p>fat fries with garlic salt and mozzarella, smothered in the city's best butter chicken sauce! (v* gf*)</p>
+                            <p class="fontWeightBold">vegetarian</p>
+                        </div>
+                    </div>
+
+                    <div class="col col12 colL6 itemPadding flex flexWrap">
+                        <div class="col9">
+                            <h5>PUNJABI POUTINE <sub class="infoFont">(THE ALL-STAR BL CLASSIC)</sub></h5>
+                        </div>
+                        <div class="col3 infoFont rightAlign">
+                            <h5>19.00</h5>
+                        </div>
+                        <div class="col12 infoFont extraPad">
+                            <p>fat fries with garlic salt and mozzarella, smothered in the city's best butter chicken sauce! (v* gf*)</p>
+                            <p class="fontWeightBold">with chicken</p>
+                        </div>
+                    </div>
+
+                    <div class="col col12 colL6 itemPadding flex flexWrap">
+                        <div class="col9">
+                            <h5>ROSEBUD</h5>
+                        </div>
+                        <div class="col3 infoFont rightAlign">
+                            <h5>14.00</h5>
+                        </div>
+                        <div class="col12 infoFont extraPad">
+                            <p>get in touch with your romatic side and take a sip of this foxy number; vanilla vodka with cranberry, pineapple and passionfruit</p>
+                        </div>
+                    </div>
+
+                    <div class="col col12 colL6 itemPadding flex flexWrap">
+                        <div class="col9">
+                            <h5>SALTED CARAMEL RUM</h5>
+                        </div>
+                        <div class="col3 infoFont rightAlign">
+                            <h5>14.50</h5>
+                        </div>
+                        <div class="col12 infoFont extraPad">
+                            <p>the pirates dessert; sticky salted caramel blended and spiked with havana dark rum</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                <div class="col12 colL6 flex justifyContentCenter floatR extraPad">
+                    <div class="col6 subHeading">
+                        <h5>SUBTOTAL</h5>
+                    </div>
+                    <div class="col6 infoFont rightAlign">
+                        <h5>87.50</h5>
+                    </div>
+                </div>
+                </div>
+
+
+                <div id="placeOrder" class="placeOrderBtn">
+                    <button class="btnPO btnMdPO btnLrgPO" type="button" name="button">PLACE ORDER</button>
+                </div>
+
+
+                <div id="placeOrderModal" class="modal hidden">
+                    <div class="modalLong">
+                        <h3 class="floatR" id="closePlaceOrder">&#10005;</h3>
+                        <h3 class="extraPad padForm">YOUR ORDER</h3>
+
+                        <div class="infoFont extraPad">
+                            <p>the standard burger x2</p>
+                        </div>
+                        <div class="infoFont extraPad">
+                            <p>punjabi poutine fries x2</p>
+                        </div>
+                        <div class="infoFont extraPad">
+                            <p>rosebud slushie x1</p>
+                        </div>
+                        <div class="infoFont extraPad">
+                            <p>salted caramel rum hard shake x1</p>
+                        </div>
+                        <h3 class="extraPad">87.50</h3>
+                        <div class="infoFont extraPad topPadding">
+                            <p>PLEASE ENTER YOUR NAME</p>
+                        </div>
+
+                        <form class="" action="index.html" method="post">
+                            <input type="text" name="firstName" value="" placeholder="first name"/>
+                        </form>
+
+
+                        <div class="infoFont padForm">
+                             <a class="backRed extraPad redBtns" href="index.html">EAT HERE</a>
+                        </div>
+                        <div class="infoFont padForm">
+                             <a class="backRed extraPad redBtns" href="index.html">TAKEAWAY</a>
+                        </div>
+                    </div>
+                </div>
+
+
+
+        </div>
 
 
 

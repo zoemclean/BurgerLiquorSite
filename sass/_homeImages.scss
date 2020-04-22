@@ -111,11 +111,12 @@
         padding: 24px 24px;
         background-color: transparent;
         border: none;
-    }
 
-    .callBtn:hover {
+    &:hover {
         color: $redColor;
     }
+    }
+
 
 }
 

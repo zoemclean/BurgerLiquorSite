@@ -1,0 +1,99 @@
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@mixin modalBase {
+    background-color: $greyColor;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: $yellowColor 2px solid;
+}
+
+.modalLong {
+    @include modalBase;
+    width: 70%;
+    height: 65%;
+}
+
+.modalMedium {
+    @include modalBase;
+    width: 70%;
+    height: 40%;
+}
+
+.modalShort {
+    @include modalBase;
+    width: 70%;
+    height: 20%;
+}
+
+.noScroll {
+    overflow-y: hidden;
+}
+
+.padForm {
+    padding: 20px 0;
+}
+
+.topPadding {
+    padding-top: 50px;
+}
+
+.quantityBox {
+    width: 50px;
+}
+
+
+
+
+
+@media screen and (min-width: $mdWidth) {
+    .modalLong {
+        @include modalBase;
+        width: 40%;
+        height: 65%;
+    }
+
+    .modalMedium {
+        @include modalBase;
+        width: 40%;
+        height: 40%;
+    }
+
+    .modalShort {
+        @include modalBase;
+        width: 30%;
+        height: 20%;
+    }
+}
+
+
+
+
+
+@media screen and (min-width: $lgWidth) {
+    .modalLong {
+        @include modalBase;
+        width: 25%;
+        height: 65%;
+    }
+
+    .modalMedium {
+        @include modalBase;
+        width: 25%;
+        height: 40%;
+    }
+}

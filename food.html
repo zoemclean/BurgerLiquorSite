@@ -8,9 +8,8 @@
 
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class="backgroundImage">
 
-        <div class="backgroundImage">
             <div class="container containerWhite">
 
                 <nav id="nav" class="navbar">
@@ -23,17 +22,37 @@
                         </div>
                         <div id="navList" class="navList">
                             <ul>
-                                <li class="listItem"><a href="food.html">FOOD</a></li>
-                                <li class="listItem"><a href="drinks.html">DRINKS</a></li>
-                                <li class="listItem"><a href="cart.html">CART</a></li>
-                                <li class="listItem listItemWaiter">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></li>
+                                <li class="listItem"><a class="navSm navMd" href="food.html">FOOD</a></li>
+                                <li class="listItem"><a class="navSm navMd" href="drinks.html">DRINKS</a></li>
+                                <li class="listItem"><a class="navSm navMd" href="cart.html">YOUR ORDER</a></li>
+                                <li id="callWaitMobile" class="listItem listItemWaiter">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></li>
                             </ul>
                         </div>
                     </div>
                 </nav>
 
-                <div class="callWaiterBtn">
+                <div id="callWaitMobileModal" class="modal hidden">
+                    <div class="modalShort">
+                        <h3 class="floatR" id="closeCallMobile">&#10005;</h3>
+                        <h3 class="extraPad centerAlign">WAITER HAS BEEN CALLED OVER</h3>
+                        <div class="infoFont padForm">
+                            <a class="backRed extraPad redBtns" href="food.html">KEEP LOOKING</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="callWaitMLrg" class="callWaiterBtn">
                     <button class="callBtnMenu" type="button" name="button">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></button>
+                </div>
+
+                <div id="callWaitLrgModal" class="modal hidden">
+                    <div class="modalShort">
+                        <h3 class="floatR" id="closeCallLrg">&#10005;</h3>
+                        <h3 class="extraPad centerAlign">WAITER HAS BEEN CALLED OVER</h3>
+                        <div class="infoFont padForm">
+                            <a class="backRed extraPad redBtns" href="food.html">KEEP LOOKING</a>
+                        </div>
+                    </div>
                 </div>
 
 
@@ -41,22 +60,47 @@
                     <div class="centerAlign backRed backRedLrg boxWidth whiteText">
                         <h3>FOOD</h3>
                     </div>
-                    <div class="shopCart">
-                        <i class="fas fa-shopping-cart fa-2x"></i>
+                    <div id="yourCart" class="shopCart">
+                        <i class="fas fa-hamburger fa-2x"></i>
                     </div>
                 </div>
 
-                <div class="flex justifyContentSpaceAround alignItemsCenter flexWrap NoflexWrapMd">
-                    <div class="centerAlign boxWidth">
-                        <h4>BURGERS</h4>
-                    </div>
-                    <div class="centerAlign boxWidth">
-                        <h4>SNACKS</h4>
-                    </div>
-                    <div class="centerAlign boxWidth">
-                        <h4>FRIES</h4>
+
+                <div id="cartModal" class="modal hidden">
+                    <div class="modalMedium">
+                        <h3 class="floatR" id="closeCart">&#10005;</h3>
+                        <h3 class="extraPad padForm">YOUR ORDER</h3>
+                        <div class="itemPadding">
+                            <div class="infoFont extraPad">
+                                <p>the standard burger x2</p>
+                            </div>
+                            <div class="infoFont extraPad">
+                                <p>punjabi poutine fries x2</p>
+                            </div>
+                            <div class="infoFont extraPad">
+                                <p>rosebud slushie x1</p>
+                            </div>
+                            <div class="infoFont extraPad">
+                                <p>salted caramel rum hard shake x1</p>
+                            </div>
+                        </div>
+                        <h3 class="extraPad topPadding">87.50</h3>
                     </div>
                 </div>
+
+
+                <div class="flex justifyContentSpaceAround alignItemsCenter flexWrap NoflexWrapMd">
+                    <div class="centerAlign boxWidth">
+                        <h4><a class="menuSubNav" href="#burgers">BURGERS</a></h4>
+                    </div>
+                    <div class="centerAlign boxWidth">
+                        <h4><a class="menuSubNav" href="#snacks">SNACKS</a></h4>
+                    </div>
+                    <div class="centerAlign boxWidth">
+                        <h4><a class="menuSubNav" href="#fries">FRIES</a></h4>
+                    </div>
+                </div>
+
 
                 <div class="flex flexWrap justifyContentSpaceAround alignItemsCenter NoflexWrapMd">
                     <div class="leftAlign smallboxWidth lrgBoxWidth">
@@ -74,12 +118,12 @@
 
                 <div class="flex justifyContentCenter">
                     <div class="headerFont">
-                        <h3>BURGERS</h3>
+                        <h3><a id="burgers">BURGERS</a></h3>
                     </div>
                 </div>
 
                 <div class="row flex flexWrap">
-                    <div class="col col12 colL6 itemPadding flex flexWrap">
+                    <div id="standardBurger" class="col col12 colL6 itemPadding flex flexWrap">
                         <div class="col9">
                             <h5>THE STANDARD</h5>
                         </div>
@@ -90,6 +134,30 @@
                             <p>beef, cheese, pickles, ketchup and mustard mayo (gf* df*)</p>
                         </div>
                     </div>
+
+
+                    <div id="standardBurgerModal" class="modal hidden">
+                        <div class="modalLong">
+                            <h3 class="floatR" id="closeBurg">&#10005;</h3>
+                            <h3 class="extraPad">THE STANDARD</h3>
+                            <h3 class="extraPad">13.00</h3>
+                            <div class="infoFont extraPad">
+                                <p>beef, cheese, pickles, ketchup and mustard mayo (gf* df*)</p>
+                            </div>
+                            <form class="infoFont padForm" action="index.html" method="post">
+                                <input class="centerAlign quantityBox" type="number" name="Quantity" value="1">
+                            </form>
+
+                            <form class="infoFont padForm" action="index.html" method="post">
+                                <textarea name="name" rows="8" cols="30" placeholder="any meal changes?"></textarea>
+                            </form>
+
+                            <div class="infoFont padForm">
+                                <a class="backRed extraPad redBtns" href="food.html">ADD TO ORDER</a>
+                            </div>
+                        </div>
+                    </div>
+
 
 
                     <div class="col col12 colL6 itemPadding flex flexWrap">
@@ -182,7 +250,7 @@
                         </div>
                     </div>
 
-                    <div class="col col12 colL6 itemPadding flex flexWrap whiteText backGreen">
+                    <div class="col col12 colL6 itemPadding flex flexWrap borderGreen">
                         <div class="col12 centerAlign">
                             <h5>NOT BEEF</h5>
                         </div>
@@ -191,7 +259,7 @@
                         </div>
                     </div>
 
-                    <div class="col col12 colL6 itemPadding flex flexWrap whiteText backYellow">
+                    <div class="col col12 colL6 itemPadding flex flexWrap borderYellow">
                         <div class="col12 centerAlign">
                             <h5>MAKE IT A BOWL</h5>
                         </div>
@@ -206,7 +274,7 @@
 
                 <div class="flex justifyContentCenter">
                     <div class="headerFont">
-                        <h3>SNACKS</h3>
+                        <h3><a id="snacks">SNACKS</a></h3>
                     </div>
                 </div>
 
@@ -279,12 +347,17 @@
 
                 <div class="flex justifyContentCenter">
                     <div class="headerFont">
-                        <h3>FRIES</h3>
+                        <h3><a id="fries">FRIES</a></h3>
                     </div>
                 </div>
 
                 <div class="row flex flexWrap">
-                    <div class="col col12 colL6 itemPadding flex flexWrap backYellow">
+                    <div class="col col12 flex justifyContentCenter itemPadding">
+                        <div class="noteFont">
+                            <p>*PLEASE NOT OUR FRIES ARE NOT COELIAC FRIENDLY*</p>
+                        </div>
+                    </div>
+                    <div id="punjabiPoutine" class="col col12 colL6 itemPadding flex flexWrap backYellow">
                         <div class="col9">
                             <h5>PUNJABI POUTINE <sub class="infoFont">(THE ALL-STAR BL CLASSIC)</sub></h5>
                         </div>
@@ -297,6 +370,34 @@
                             <p>with chicken - 19.00</p>
                         </div>
                     </div>
+
+
+                    <div id="poutineModal" class="modal hidden">
+                        <div class="modalLong">
+                            <h3 class="floatR" id="closeFries">&#10005;</h3>
+                            <h3 class="extraPad">PUNJABI POUTINE</h3>
+                            <h3 class="extraPad">14.00</h3>
+                            <div class="infoFont extraPad">
+                                <p>fat fries with garlic salt and mozzarella, smothered in the city's best butter chicken sauce! (v* gf*)</p>
+                            </div>
+                            <form class="infoFont padForm" action="index.html" method="post">
+                                <input type="checkbox" name="vegetarian" value="vegetarian">vegetarian<br/>
+                                <input type="checkbox" name="w/ chicken" value="w/ chicken">w/ chicken<br/>
+                            </form>
+                            <form class="infoFont padForm" action="index.html" method="post">
+                                <input class="centerAlign quantityBox" type="number" name="Quantity" value="1">
+                            </form>
+
+                            <form class="infoFont padForm" action="index.html" method="post">
+                                <textarea name="name" rows="8" cols="30" placeholder="any meal changes?"></textarea>
+                            </form>
+
+                            <div class="infoFont">
+                                <a class="backRed extraPad redBtns" href="food.html">ADD TO ORDER</a>
+                            </div>
+                        </div>
+                    </div>
+
 
                     <div class="col col12 colL6 itemPadding flex flexWrap">
                         <div class="col9">
@@ -344,13 +445,6 @@
                         </div>
                     </div>
 
-                    <div class="col col12 flex flexWrap justifyContentCenter">
-                        <p class="noteFont">*PLEASE NOT OUR FRIES ARE NOT COELIAC FRIENDLY*</p>
-                    </div>
-
-
-
-
                 </div>
 
 
@@ -358,7 +452,7 @@
 
 
                 <div class="placeOrderBtn">
-                    <button class="btnPO btnMdPO btnLrgPO" type="button" name="button">PLACE ORDER</button>
+                    <a class="btnPO btnMdPO btnLrgPO redBtns" href="cart.html">PLACE ORDER</a>
                 </div>
 
 
@@ -371,7 +465,6 @@
 
 
             </div>
-        </div>
 
 
 

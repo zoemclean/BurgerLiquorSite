@@ -374,10 +374,11 @@ textarea {
 body {
   font-family: 'Raleway', 'Lato', 'Helvetica', sans-serif;
   font-size: 20px;
+  margin-bottom: 100px;
 }
 
 .row {
-  margin-bottom: 15px;
+  margin: 10px;
 }
 .row::after {
   clear: both;
@@ -590,24 +591,30 @@ body {
   font-size: 40px;
 }
 
-a:link {
-  color: white;
+.navSm {
   text-decoration: none;
 }
-
-a:visited {
+.navSm:link, .navSm:visited {
   color: white;
-  text-decoration: none;
 }
-
-a:hover {
+.navSm:hover {
   color: #d92229;
-  text-decoration: none;
+}
+.navSm:active {
+  color: white;
 }
 
-a:active {
-  color: white;
+.redBtns {
   text-decoration: none;
+}
+.redBtns:link, .redBtns:visited {
+  color: white;
+}
+.redBtns:hover {
+  color: black;
+}
+.redBtns:active {
+  color: white;
 }
 
 .listItemWaiter {
@@ -654,24 +661,17 @@ a:active {
     display: none;
   }
 
-  a:link {
-    color: black;
+  .navMd {
     text-decoration: none;
   }
-
-  a:visited {
+  .navMd:link, .navMd:visited {
     color: black;
-    text-decoration: none;
   }
-
-  a:hover {
+  .navMd:hover {
     color: #d92229;
-    text-decoration: none;
   }
-
-  a:active {
+  .navMd:active {
     color: black;
-    text-decoration: none;
   }
 }
 @media screen and (min-width: 1300px) {
@@ -814,7 +814,6 @@ a:active {
     background-color: transparent;
     border: none;
   }
-
   .callBtn:hover {
     color: #d92229;
   }
@@ -864,6 +863,143 @@ a:active {
   font-size: 16px;
 }
 
+.menuSubNav:link, .menuSubNav:visited {
+  color: black;
+  text-decoration: none;
+}
+
+.menuSubNav:hover {
+  color: #d92229;
+  text-decoration: none;
+}
+
+.menuSubNav:active {
+  color: black;
+  text-decoration: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hidden {
+  display: none;
+}
+
+.modalLong {
+  background-color: #3c3c3e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border: #fbb917 2px solid;
+  width: 70%;
+  height: 65%;
+}
+
+.modalMedium {
+  background-color: #3c3c3e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border: #fbb917 2px solid;
+  width: 70%;
+  height: 40%;
+}
+
+.modalShort {
+  background-color: #3c3c3e;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border: #fbb917 2px solid;
+  width: 70%;
+  height: 20%;
+}
+
+.noScroll {
+  overflow-y: hidden;
+}
+
+.padForm {
+  padding: 20px 0;
+}
+
+.topPadding {
+  padding-top: 50px;
+}
+
+.quantityBox {
+  width: 50px;
+}
+
+@media screen and (min-width: 600px) {
+  .modalLong {
+    background-color: #3c3c3e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: #fbb917 2px solid;
+    width: 40%;
+    height: 65%;
+  }
+
+  .modalMedium {
+    background-color: #3c3c3e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: #fbb917 2px solid;
+    width: 40%;
+    height: 40%;
+  }
+
+  .modalShort {
+    background-color: #3c3c3e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: #fbb917 2px solid;
+    width: 30%;
+    height: 20%;
+  }
+}
+@media screen and (min-width: 1300px) {
+  .modalLong {
+    background-color: #3c3c3e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: #fbb917 2px solid;
+    width: 25%;
+    height: 65%;
+  }
+
+  .modalMedium {
+    background-color: #3c3c3e;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    border: #fbb917 2px solid;
+    width: 25%;
+    height: 40%;
+  }
+}
+.floatR {
+  float: right;
+}
+
 .redText {
   color: #d92229;
 }
@@ -876,16 +1012,24 @@ a:active {
   background-color: #d92229;
 }
 
-.backGreen {
-  background-color: #41b54a;
-}
-
 .backYellow {
   background-color: #fbb917;
 }
 
 .backBlue {
   background-color: #a0dcf1;
+}
+
+.borderGreen {
+  border: #41b54a 3px solid;
+}
+
+.borderYellow {
+  border: #fbb917 3px solid;
+}
+
+.fontWeightBold {
+  font-weight: 700;
 }
 
 .infoFont {
@@ -895,6 +1039,10 @@ a:active {
 
 .headerFont {
   font-size: 25px;
+}
+
+.subHeading {
+  font-size: 20px;
 }
 
 .boxWidth {
@@ -961,6 +1109,22 @@ a:active {
   display: none;
 }
 
+.reviewBtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: fixed;
+  top: 90%;
+  left: 20%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  color: black;
+  padding: 24px 16px;
+  background-color: transparent;
+  border: none;
+}
+
 .placeOrderBtn .btnPO {
   position: fixed;
   top: 95%;
@@ -975,6 +1139,7 @@ a:active {
   padding: 12px 24px;
   border: none;
   width: 100%;
+  text-align: center;
 }
 
 @media screen and (min-width: 600px) {
@@ -986,19 +1151,19 @@ a:active {
 
   .backgroundImage {
     width: 100%;
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0.4))), url(../highFiImages/background.jpg);
-    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../highFiImages/background.jpg);
+    background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.4)), to(rgba(255, 255, 255, 0.4))), url(../highFiImages/backgroundLong.png);
+    background: linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4)), url(../highFiImages/backgroundLong.png);
     background-size: cover;
-    background-position: left;
-    background-repeat: repeat-y;
+    background-position: center;
+    background-repeat: repeat;
   }
 
   .callBtnMenu {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    position: absolute;
-    top: 80%;
+    position: fixed;
+    top: 90%;
     left: 80%;
     -webkit-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%);
@@ -1010,8 +1175,8 @@ a:active {
     padding: 24px 16px;
     background-color: transparent;
     border: none;
+    z-index: 1000;
   }
-
   .callBtnMenu:hover {
     color: #d92229;
   }

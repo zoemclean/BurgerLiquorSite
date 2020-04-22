@@ -8,9 +8,9 @@
 
         <link rel="stylesheet" href="css/style.css">
     </head>
-    <body>
+    <body class="backgroundImage">
 
-        <div class="backgroundImage">
+
             <div class="container containerWhite">
 
         <nav id="nav" class="navbar">
@@ -23,17 +23,37 @@
                 </div>
                 <div id="navList" class="navList">
                     <ul>
-                        <li class="listItem"><a href="food.html">FOOD</a></li>
-                        <li class="listItem"><a href="drinks.html">DRINKS</a></li>
-                        <li class="listItem"><a href="cart.html">CART</a></li>
-                        <li class="listItem listItemWaiter">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></li>
+                        <li class="listItem"><a class="navSm navMd" href="food.html">FOOD</a></li>
+                        <li class="listItem"><a class="navSm navMd" href="drinks.html">DRINKS</a></li>
+                        <li class="listItem"><a class="navSm navMd" href="cart.html">YOUR ORDER</a></li>
+                        <li id="callWaitMobile" class="listItem listItemWaiter">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
-        <div class="callWaiterBtn">
+        <div id="callWaitMobileModal" class="modal hidden">
+            <div class="modalShort">
+                <h3 class="floatR" id="closeCallMobile">&#10005;</h3>
+                <h3 class="extraPad centerAlign">WAITER HAS BEEN CALLED OVER</h3>
+                <div class="infoFont padForm">
+                    <a class="backRed extraPad redBtns" href="food.html">KEEP LOOKING</a>
+                </div>
+            </div>
+        </div>
+
+        <div id="callWaitMLrg" class="callWaiterBtn">
             <button class="callBtnMenu" type="button" name="button">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></button>
+        </div>
+
+        <div id="callWaitLrgModal" class="modal hidden">
+            <div class="modalShort">
+                <h3 class="floatR" id="closeCallLrg">&#10005;</h3>
+                <h3 class="extraPad centerAlign">WAITER HAS BEEN CALLED OVER</h3>
+                <div class="infoFont padForm">
+                    <a class="backRed extraPad redBtns" href="food.html">KEEP LOOKING</a>
+                </div>
+            </div>
         </div>
 
 
@@ -41,20 +61,43 @@
             <div class="centerAlign backRed backRedLrg boxWidth whiteText">
                 <h3>DRINKS</h3>
             </div>
-            <div class="shopCart">
-                <i class="fas fa-shopping-cart fa-2x"></i>
+            <div id="yourCart" class="shopCart">
+                <i class="fas fa-hamburger fa-2x"></i>
             </div>
         </div>
 
+        <div id="cartModal" class="modal hidden">
+            <div class="modalMedium">
+                <h3 class="floatR" id="closeCart">&#10005;</h3>
+                <h3 class="extraPad padForm">YOUR ORDER</h3>
+                <div class="itemPadding">
+                    <div class="infoFont extraPad">
+                        <p>the standard burger x2</p>
+                    </div>
+                    <div class="infoFont extraPad">
+                        <p>punjabi poutine fries x2</p>
+                    </div>
+                    <div class="infoFont extraPad">
+                        <p>rosebud slushie x1</p>
+                    </div>
+                    <div class="infoFont extraPad">
+                        <p>salted caramel rum hard shake x1</p>
+                    </div>
+                </div>
+                <h3 class="extraPad topPadding">87.50</h3>
+            </div>
+        </div>
+
+
         <div class="flex justifyContentSpaceAround alignItemsCenter flexWrap NoflexWrapMd">
             <div class="centerAlign boxWidth">
-                <h4>COCKTAILS & MORE</h4>
+                <h4><a class="menuSubNav" href="#cocktailsAndMore">COCKTAILS & MORE</a></h4>
             </div>
             <div class="centerAlign boxWidth">
-                <h4>SPIRITS</h4>
+                <h4><a class="menuSubNav" href="#spirits">SPIRITS</a></h4>
             </div>
             <div class="centerAlign boxWidth">
-                <h4>NON-ALCOHOLIC</h4>
+                <h4><a class="menuSubNav" href="#nonAlcoholic">NON-ALCOHOLIC</a></h4>
             </div>
         </div>
 
@@ -67,7 +110,7 @@
 
         <div class="flex justifyContentCenter itemPadding">
             <div class="headerFont">
-                <h3>COCKTAILS & MORE</h3>
+                <h3><a id="cocktailsAndMore">COCKTAILS & MORE</a></h3>
             </div>
         </div>
 
@@ -77,7 +120,7 @@
                     <h3>SLUSHIES</h3>
                 </div>
             </div>
-            <div class="col col12 colL6 itemPadding flex flexWrap">
+            <div id="rosebud" class="col col12 colL6 itemPadding flex flexWrap">
                 <div class="col9">
                     <h5>ROSEBUD</h5>
                 </div>
@@ -86,6 +129,28 @@
                 </div>
                 <div class="col12 infoFont extraPad">
                     <p>get in touch with your romatic side and take a sip of this foxy number; vanilla vodka with cranberry, pineapple and passionfruit</p>
+                </div>
+            </div>
+
+            <div id="rosebudModal" class="modal hidden">
+                <div class="modalLong">
+                    <h3 class="floatR" id="closeRose">&#10005;</h3>
+                    <h3 class="extraPad">ROSEBUD</h3>
+                    <h3 class="extraPad">14.00</h3>
+                    <div class="infoFont extraPad">
+                        <p>vanilla vodka with cranberry, pineapple and passionfruit</p>
+                    </div>
+                    <form class="infoFont padForm" action="index.html" method="post">
+                        <input class="centerAlign quantityBox" type="number" name="Quantity" value="1">
+                    </form>
+
+                    <form class="infoFont padForm" action="index.html" method="post">
+                        <textarea name="name" rows="8" cols="30" placeholder="please note not all drinks can be changed..."></textarea>
+                    </form>
+
+                    <form class="infoFont padForm" action="index.html" method="post">
+                         <a class="backRed extraPad redBtns" href="drinks.html">ADD TO ORDER</a>
+                    </form>
                 </div>
             </div>
 
@@ -340,7 +405,7 @@
                 </div>
             </div>
 
-            <div class="col col12 colL6 itemPadding flex flexWrap">
+            <div id="saltedCarRum" class="col col12 colL6 itemPadding flex flexWrap">
                 <div class="col9">
                     <h5>SALTED CARAMEL RUM</h5>
                 </div>
@@ -349,6 +414,28 @@
                 </div>
                 <div class="col12 infoFont extraPad">
                     <p>the pirates dessert; sticky salted caramel blended and spiked with havana dark rum</p>
+                </div>
+            </div>
+
+            <div id="saltedCarRumModal" class="modal hidden">
+                <div class="modalLong">
+                    <h3 class="floatR" id="closeSaltedRum">&#10005;</h3>
+                    <h3 class="extraPad">SALTED CARAMEL RUM</h3>
+                    <h3 class="extraPad">14.50</h3>
+                    <div class="infoFont extraPad">
+                        <p>sticky salted caramel blended and spiked with havana dark rum</p>
+                    </div>
+                    <form class="infoFont padForm" action="index.html" method="post">
+                        <input class="centerAlign quantityBox" type="number" name="Quantity" value="1">
+                    </form>
+
+                    <form class="infoFont padForm" action="index.html" method="post">
+                        <textarea name="name" rows="8" cols="30" placeholder="please note not all drinks can be changed..."></textarea>
+                    </form>
+
+                    <form class="infoFont padForm" action="index.html" method="post">
+                         <a class="backRed extraPad redBtns" href="drinks.html">ADD TO ORDER</a>
+                    </form>
                 </div>
             </div>
 
@@ -616,20 +703,752 @@
 
         <div class="flex justifyContentCenter itemPadding">
             <div class="headerFont">
-                <h3>SPIRITS</h3>
+                <h3><a id="spirits">SPIRITS</a></h3>
             </div>
         </div>
 
         <div class="row flex flexWrap">
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="headerFont">
+                    <h3>BOURBON</h3>
+                </div>
+            </div>
+        </div>
+
+        <div class="row flex flexWrap backRed whiteText">
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>AGED / SIPPING</h5>
+                </div>
+            </div>
             <div class="col col12 colL6 itemPadding flex flexWrap">
                 <div class="col9">
-                    <h5></h5>
+                    <h5>baker's 7yr</h5>
                 </div>
                 <div class="col3 infoFont rightAlign">
-                    <h5></h5>
+                    <h5>11.00</h5>
                 </div>
-                <div class="col12 infoFont extraPad">
-                    <p></p>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>blanton's</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>14.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>eagle rare</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>12.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>four roses small batch</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>jack daniel's single barrrel</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>13.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>jefferson's</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>13.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>michters</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>15.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>old bardstown</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>woofford reserve dbl oaked</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+        </div>
+        <div class="row flex flexWrap">
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>BOURBON</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>buffalo trace</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>bulleit</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>elijah craig small batch</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>gentleman jack</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>heaven hill</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>jim beam double oaked</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>jim beam small batch</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>knob creek 9yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>makers mark</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>makers mark 46 old forester</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>russell's reserve</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>wild turkey</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>woodford reserve</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>RYE WHISKY</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>bulliet small batch rye</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>jim beam rye</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>rittenhouse rye 100 proof</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>tincup rye</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>wild turkey rye</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+
+        </div>
+
+
+        <div class="row flex flexWrap">
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="headerFont">
+                    <h3>RUM</h3>
+                </div>
+            </div>
+        </div>
+        <div class="row flex flexWrap backBlue">
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>AGED / SIPPING</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>angostura 1919</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>13.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>apppleton estate 12yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>13.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>el dorado</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>matusalem 15yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>mt gay xo</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>murderer's bay 14yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>13.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>plantation nicaragua</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>pyrat xo reserve</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>12.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>santiago de cuba 12yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>13.00</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row flex flexWrap">
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>SPICED</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>helmsman spiced</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>kraken</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>sailor jerry</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>stolen smoked</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>black magic</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+
+
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>GOLDEN</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>angostura 5yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>angostura 7yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>appleton estate signature</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>diplomatico</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>goslings gold</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>havana club especial</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>havana club 7yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>j. bally</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>matusalem clasico 10yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>matusalem extra anejo</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>matusalem solera 7yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>mt gay eclipse</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>plantation barbados</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>plantation jamaica</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>plantation original dark</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>plantation pineapple</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>stolen gold</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+
+
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>DARK / NAVY</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>curzan black strap</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>goslings black seal</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>stolen dark</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+
+
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>WHITE</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>cruzen aged white</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>havana club 3yr</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>murderer's bay white</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>plantation 3 star</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>santiago de cuba blanca</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+        </div>
+
+        <div class="row flex flexWrap">
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="headerFont">
+                    <h3>THE REST</h3>
+                </div>
+            </div>
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>GIN</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>beefeater gin</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>dancing sands aged gin</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>11.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>dancing sands dry gin</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>hendrick's gin</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>12.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>scrapergrace gin</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>denzien (local)</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>13.00</h5>
+                </div>
+            </div>
+
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>TEQUILA</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>el jimador tequila</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>WHISKY</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>dalwhinnie</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>14.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>the famous grouse</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>jameson</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>laphroaig</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>12.00</h5>
+                </div>
+            </div>
+
+            <div class="col col12 itemPadding flex justifyContentCenter">
+                <div class="subHeading">
+                    <h5>VODKA</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>absolut vodka</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>8.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>brokenshed vodka</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>9.00</h5>
+                </div>
+            </div>
+            <div class="col col12 colL6 itemPadding flex flexWrap">
+                <div class="col9">
+                    <h5>dancing sands vodka</h5>
+                </div>
+                <div class="col3 infoFont rightAlign">
+                    <h5>10.00</h5>
                 </div>
             </div>
 
@@ -641,7 +1460,7 @@
 
         <div class="flex justifyContentCenter itemPadding">
             <div class="headerFont">
-                <h3>NON-ALCOHOLIC</h3>
+                <h3><a id="nonAlcoholic">NON-ALCOHOLIC</a></h3>
             </div>
         </div>
 
@@ -860,7 +1679,7 @@
 
 
         <div class="placeOrderBtn">
-            <button class="btnPO btnMdPO btnLrgPO" type="button" name="button">PLACE ORDER</button>
+            <a class="btnPO btnMdPO btnLrgPO redBtns" href="cart.html">PLACE ORDER</a>
         </div>
 
 
@@ -873,7 +1692,6 @@
 
 
         </div>
-    </div>
 
 
 

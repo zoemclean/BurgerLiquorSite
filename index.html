@@ -21,33 +21,56 @@
                 </div>
                 <div id="navList" class="navList">
                     <ul>
-                        <li class="listItem"><a href="food.html">FOOD</a></li>
-                        <li class="listItem"><a href="drinks.html">DRINKS</a></li>
-                        <li class="listItem"><a href="cart.html">CART</a></li>
-                        <li class="listItem listItemWaiter">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></li>
+                        <li class="listItem"><a class="navSm navMd" href="food.html">FOOD</a></li>
+                        <li class="listItem"><a class="navSm navMd" href="drinks.html">DRINKS</a></li>
+                        <li class="listItem"><a class="navSm navMd" href="cart.html">YOUR ORDER</a></li>
+                        <li id="callWaitMobile" class="listItem listItemWaiter">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></li>
                     </ul>
                 </div>
             </div>
         </nav>
 
+        <div id="callWaitMobileModal" class="modal hidden">
+            <div class="modalShort">
+                <h3 class="floatR" id="closeCallMobile">&#10005;</h3>
+                <h3 class="extraPad centerAlign">WAITER HAS BEEN CALLED OVER</h3>
+                <form class="infoFont padForm" action="index.html" method="post">
+                    <a class="backRed extraPad redBtns" href="food.html">KEEP LOOKING</a>
+                </form>
+            </div>
+        </div>
+
+        <div id="callWaitMLrg" class="callWaiterBtn">
+            <button class="callBtnMenu" type="button" name="button">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></button>
+        </div>
+
+        <div id="callWaitLrgModal" class="modal hidden">
+            <div class="modalShort">
+                <h3 class="floatR" id="closeCallLrg">&#10005;</h3>
+                <h3 class="extraPad centerAlign">WAITER HAS BEEN CALLED OVER</h3>
+                <div class="infoFont padForm">
+                    <a class="backRed extraPad redBtns" href="food.html">KEEP LOOKING</a>
+                </div>
+            </div>
+        </div>
+
+
 
         <div class="containerHome overflow">
             <div class="row">
                 <div class="colImg col12 colM6 colL4 containerImg">
-                    <img class="homeImageBurger" src="highFiImages/Burger1.jpg" alt="">
-                    <button class="btn btnLrg" type="button" name="button">BURGERS</button>
+                    <img class="homeImageBurger" src="highFiImages/Burger1.jpg" alt="Burger Liquor burger">
+                    <a class="btn btnLrg redBtns" href="food.html">BURGERS</a>
                 </div>
 
                 <div class="colImg col12 colM6 colL4 containerImg">
-                    <img class="homeImageSnacks" src="highFiImages/meal2.jpg" alt="">
-                    <button class="btn btnLrg" type="button" name="button">SNACKS</button>
+                    <img class="homeImageSnacks" src="highFiImages/meal2.jpg" alt="A selection of food from Burger Liquor from a birds eye view">
+                    <a class="btn btnLrg redBtns" href="food.html">SNACKS</a>
                 </div>
 
                 <div class="colImg col12 colL4 containerImg callWaiterBtn">
-                    <img class="homeImageDrinks" src="highFiImages/liquorShelf2.jpg" alt="">
-                    <button class="btn btnLrg" type="button" name="button">DRINKS</button>
-
-                    <button class="callBtn" type="button" name="button">CALL WAITER<i class="far fa-hand-paper fa-1x"></i></button>
+                    <img class="homeImageDrinks" src="highFiImages/liquorShelf2.jpg" alt="a photo of Burger Liquors spirit and liquor shelf">
+                    <a class="btn btnLrg redBtns" href="drinks.html">DRINKS</a>
                 </div>
             </div>
 
@@ -66,9 +89,12 @@
 
 
 
+
+
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
         <script src="https://kit.fontawesome.com/ba9f813c63.js" crossorigin="anonymous"></script>
         <script src="js/script.js" charset="utf-8"></script>
+
 
     </body>
 </html>
